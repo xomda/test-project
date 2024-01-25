@@ -1,0 +1,45 @@
+plugins {
+    id "application"
+    id "org.xomda.plugin-gradle" version "latest.release"
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation libs.junit.jupiter
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test') { useJUnitPlatform() }
+
+xomda {
+    classpath = ["org.xomda.model"]
+    plugins = ["org.xomda.core.module.XOmdaReverseEntity", "org.xomda.core.module.XOmdaTypeRefs"]
+    // models = ["src/xomda/Test.csv"]
+}
+
+
+// Add a source set for the functional test suite
+sourceSets {
+    functionalTest {}
+}
+
+configurations.functionalTestImplementation.extendsFrom(configurations.testImplementation)
+configurations.functionalTestRuntimeOnly.extendsFrom(configurations.testRuntimeOnly)
+
+// Add a task to run the functional tests
+tasks.register('functionalTest', Test) {
+    testClassesDirs = sourceSets.functionalTest.output.classesDirs
+    classpath = sourceSets.functionalTest.runtimeClasspath
+    useJUnitPlatform()
+}
+
+tasks.named("generateXOmdaTemplates") {
+    finalizedBy("functionalTest")
+}
+
+//gradlePlugin.testSourceSets.add(sourceSets.functionalTest)
+

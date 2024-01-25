@@ -1,0 +1,19 @@
+plugins {
+    id "org.xomda.plugin-gradle" version "latest.release"
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    // test local templates dependencies
+    xomda libs.log4j
+}
+
+xomda {
+    classpath = ["org.xomda.model"]
+    plugins = ["org.xomda.core.module.XOmdaReverseEntity", "org.xomda.core.module.XOmdaTypeRefs"]
+    // models = ["src/xomda/Model.csv"]
+}

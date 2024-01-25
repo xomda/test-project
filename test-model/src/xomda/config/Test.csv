@@ -1,0 +1,22 @@
+Package;name;packageName;;;;;;;;;
+Enum;name;identifier;;;;;;;;;description
+Value;name;;;;;;;;;;description
+Entity;name;identifier;parent;type;;dependency;transient;;;;description
+Attribute;name;identifier;type;size;scale;enumRef;entityRef;dependency;multiValued;required;description
+;;;;;;;;;;;
+Package;Test;test;;;;;;;;;
+;;;;;;;;;;;
+Enum;Test Enum;test_enm;;;;;;;;;
+Value;Test 1;1;;;;;;;;;
+Value;Test 2;2;;;;;;;;;
+Value;Test 2;3;;;;;;;;;
+;;;;;;;;;;;
+Entity;Test Entity 1;te1;;Static;;Aggregate;;;;;
+Attribute;Package;at11;Entity;;;;XOMDA/Core/Package;;;TRUE;
+Attribute;Attribute 12;at12;String;255;;;;;;TRUE;
+Attribute;Attribute 13;at13;String;255;;;;;;TRUE;
+;;;;;;;;;;;
+Entity;Test Entity 2;te2;;Static;;Aggregate;;;;;
+Attribute;Entity;at21;Entity;;;;XOMDA/Core/Entity;;;TRUE;
+Attribute;Attribute 22;at22;String;255;;;;;;TRUE;
+Attribute;Attribute 23;at23;String;255;;;;;;TRUE;
