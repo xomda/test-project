@@ -13,8 +13,6 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
-tasks.named('test') { useJUnitPlatform() }
-
 xomda {
     classpath = ["org.xomda.model"]
     plugins = ["org.xomda.core.module.XOmdaReverseEntity", "org.xomda.core.module.XOmdaTypeRefs"]

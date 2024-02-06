@@ -15,5 +15,4 @@ dependencies {
 xomda {
     classpath = ["org.xomda.model"]
     plugins = ["org.xomda.core.module.XOmdaReverseEntity", "org.xomda.core.module.XOmdaTypeRefs"]
-    // models = ["src/xomda/Model.csv"]
 }

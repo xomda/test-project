@@ -1,7 +1,13 @@
 pluginManagement {
+    includeBuild('gradle/projectPlugins')
+
     repositories {
         mavenLocal()
         gradlePluginPortal()
+        maven {
+            name 'xomda packages'
+            url 'https://maven.pkg.github.com/xomda/xomda'
+        }
     }
 }
 
