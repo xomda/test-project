@@ -1,6 +1,6 @@
 // This plugin extends the xomda-java-base configuration and turns a project into a gradle plugin
 plugins {
-    id('xomda-java-base')
-    id('java-gradle-plugin')
+	id('xomda-java-base')
+	id('java-gradle-plugin')
 }
 
