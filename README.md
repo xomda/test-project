@@ -2,17 +2,36 @@
 
 ## Prerequisites
 
-Because the [XOMDA](https://github.com/xomda/xomda)-project hasn't been published yet to maven, it should first be
-deployed to your local maven repository, so that gradle can find it.
+The [XOMDA](https://github.com/xomda/xomda)-project hasn't been published to maven central yet.
+To make Gradle find XOMDA, you should perform one of the following actions.
 
-```bash
-# in xomda (https://github.com/xomda/xomda)
-./gradlew clean build publishToMavenLocal
+### Deploy locally
+
+Deployed to your local maven repository, so that gradle can find it:
+
+  ```bash
+  # in xomda (https://github.com/xomda/xomda)
+  ./gradlew clean build publishToMavenLocal
+  ```
+
+### Configure the repo
+
+The maven repo should be defined in settings.gradle:
+
+```groovy
+pluginManagement {
+	repositories {
+		maven {
+			name 'xomda packages'
+			url 'https://maven.pkg.github.com/xomda/xomda'
+		}
+	}
+}
 ```
 
 ## Build the project
 
-After that, you should be able to build the project. The XOMDA-plugin will kick in and do its work.
+The XOMDA-plugin will kick in automatically during the Gradle build.
 
 ```bash
 ./gradlew clean build
