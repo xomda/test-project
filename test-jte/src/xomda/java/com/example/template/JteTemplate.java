@@ -48,7 +48,7 @@ public class JteTemplate implements Template<Package> {
 		templateEngine.render("example.jte", state, output);
 
 		System.out.println("filename: " + config.getFilename());
-
-		System.out.println(output);
+		System.out.println();
+		System.out.println(config.getTrim() ? output.toString().trim() : output);
 	}
 }

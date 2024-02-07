@@ -7,5 +7,6 @@
 <%-- set the output filename --%>
 !{ config.setFilename("test.txt"); }
 
-Out: ${config.getFilename()}
-Package found: ${pkg.getName()}
+class Test {
+	// ${pkg.getName()}
+}
