@@ -19,8 +19,12 @@ import org.xomda.model.Package;
 public class JteTemplate implements Template<Package> {
 	@Override
 	public void generate(final Package aPackage, final TemplateContext templateContext) throws IOException {
+		TemplateConfig config = new TemplateConfig();
+
 		Map<String, Object> state = new ConcurrentHashMap<>();
 		state.put("pkg", aPackage);
+		state.put("config", config);
+		state.put("out", "");
 
 		//
 		Path outPath = Path.of(templateContext.outDir());
@@ -42,6 +46,8 @@ public class JteTemplate implements Template<Package> {
 
 		TemplateOutput output = new StringOutput();
 		templateEngine.render("example.jte", state, output);
+
+		System.out.println("filename: " + config.getFilename());
 
 		System.out.println(output);
 	}
