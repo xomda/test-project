@@ -7,9 +7,9 @@ import java.io.PrintWriter;
 import com.github.mustachejava.DefaultMustacheFactory;
 import com.github.mustachejava.Mustache;
 import com.github.mustachejava.MustacheFactory;
-import org.xomda.core.template.Template;
-import org.xomda.core.template.TemplateContext;
 import org.xomda.model.Package;
+import org.xomda.template.Template;
+import org.xomda.template.TemplateContext;
 
 public class MustacheTemplate implements Template<Package> {
 	@Override

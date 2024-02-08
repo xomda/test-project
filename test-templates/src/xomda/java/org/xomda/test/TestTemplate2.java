@@ -4,10 +4,11 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.core.config.Configurator;
-import org.xomda.core.template.Template;
-import org.xomda.core.template.TemplateContext;
+import org.xomda.model.Package;
+import org.xomda.template.Template;
+import org.xomda.template.TemplateContext;
 
-public class TestTemplate2 implements Template<org.xomda.model.Package> {
+public class TestTemplate2 implements Template<Package> {
 	private static final Logger logger = LogManager.getLogger(TestTemplate2.class);
 
 	static {

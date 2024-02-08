@@ -1,5 +1,5 @@
-import org.xomda.core.template.Template;
-import org.xomda.core.template.TemplateContext;
+import org.xomda.template.Template;
+import org.xomda.template.TemplateContext;
 
 public class TestTemplate implements Template<Object> {
 

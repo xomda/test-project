@@ -12,9 +12,9 @@ import gg.jte.TemplateEngine;
 import gg.jte.TemplateOutput;
 import gg.jte.output.StringOutput;
 import gg.jte.resolve.DirectoryCodeResolver;
-import org.xomda.core.template.Template;
-import org.xomda.core.template.TemplateContext;
 import org.xomda.model.Package;
+import org.xomda.template.Template;
+import org.xomda.template.TemplateContext;
 
 public class JteTemplate implements Template<Package> {
 	@Override

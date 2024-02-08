@@ -9,9 +9,9 @@ import java.nio.file.Paths;
 import java.util.StringJoiner;
 
 import org.xomda.core.module.template.PackageTemplate;
-import org.xomda.core.template.TemplateContext;
 import org.xomda.model.Attribute;
 import org.xomda.model.Entity;
+import org.xomda.template.TemplateContext;
 
 public class TestModelTemplate extends PackageTemplate {
 	@Override

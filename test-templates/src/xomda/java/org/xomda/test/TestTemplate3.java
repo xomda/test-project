@@ -3,8 +3,8 @@ package org.xomda.test;
 import java.io.IOException;
 
 import org.xomda.core.module.template.PackageTemplate;
-import org.xomda.core.template.TemplateContext;
 import org.xomda.model.Entity;
+import org.xomda.template.TemplateContext;
 
 public class TestTemplate3 extends PackageTemplate {
 
