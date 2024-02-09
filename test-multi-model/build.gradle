@@ -19,13 +19,3 @@ xomda {
     classpath = ["org.xomda.model"]
     plugins = ["org.xomda.core.module.XOmdaReverseEntity", "org.xomda.core.module.XOmdaTypeRefs",]
 }
-
-
-// Add a source set for the functional test suite
-sourceSets {
-    main {
-        java {
-            srcDirs 'src/generated/java'
-        }
-    }
-}

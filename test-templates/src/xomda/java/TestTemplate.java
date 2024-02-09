@@ -4,8 +4,9 @@ import org.xomda.template.TemplateContext;
 public class TestTemplate implements Template<Object> {
 
 	@Override
-	public void generate(Object o, TemplateContext ctx) {
+	public void generate(final Object o, final TemplateContext ctx) {
 		System.out.println("Template 1 works! (" + o.getClass() + ") [" + ctx.outDir() + "]");
 		System.out.println();
 	}
+
 }

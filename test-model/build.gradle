@@ -34,7 +34,7 @@ tasks.register('functionalTest', Test) {
     useJUnitPlatform()
 }
 
-tasks.named("generateXOmdaTemplates") {
+tasks.named("xomdaGenerate") {
     finalizedBy("functionalTest")
 }
 
