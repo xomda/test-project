@@ -11,7 +11,7 @@ public class TestModelTemplate extends XOmdaCodeTemplate {
 		String newPath = Paths.get(context.outDir(), "src", "generated", "java").toString();
 		TemplateContext newContext = new TemplateContext(newPath, context.getParseResults());
 
-		getLogger().warn("Generating Multi-model to: " + newContext.outDir());
+		getLogger().info("Generating multi-model (" + pkg.getName() + ") to: " + newContext.outDir());
 		super.generate(pkg, newContext);
 	}
 }
