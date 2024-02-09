@@ -17,26 +17,3 @@ xomda {
     classpath = ["org.xomda.model"]
     plugins = ["org.xomda.core.module.XOmdaReverseEntity", "org.xomda.core.module.XOmdaTypeRefs"]
 }
-
-
-// Add a source set for the functional test suite
-sourceSets {
-    functionalTest {}
-}
-
-configurations.functionalTestImplementation.extendsFrom(configurations.testImplementation)
-configurations.functionalTestRuntimeOnly.extendsFrom(configurations.testRuntimeOnly)
-
-// Add a task to run the functional tests
-tasks.register('functionalTest', Test) {
-    testClassesDirs = sourceSets.functionalTest.output.classesDirs
-    classpath = sourceSets.functionalTest.runtimeClasspath
-    useJUnitPlatform()
-}
-
-tasks.named("xomdaGenerate") {
-    finalizedBy("functionalTest")
-}
-
-//gradlePlugin.testSourceSets.add(sourceSets.functionalTest)
-
