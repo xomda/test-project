@@ -16,9 +16,9 @@ public class MustacheTemplate implements Template<Package> {
 	public void generate(final Package aPackage, final TemplateContext templateContext) throws IOException {
 		MustacheFactory mf = new DefaultMustacheFactory();
 		try (
-				FileReader fr = new FileReader(templateContext.outDir() + "/src/xomda/java/template.mustache");
-				PrintWriter pw = new PrintWriter(System.out);
-		) {
+				FileReader fr = new FileReader(templateContext.cwd() + "/src/xomda/java/template.mustache");
+				PrintWriter pw = new PrintWriter(System.out)
+        ) {
 			pw.write("MUSTACHE: \n\n");
 
 			Mustache mustache = mf.compile(fr, "o");

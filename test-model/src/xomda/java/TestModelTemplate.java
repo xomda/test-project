@@ -16,9 +16,9 @@ import org.xomda.template.TemplateContext;
 public class TestModelTemplate extends PackageTemplate {
 	@Override
 	public void generate(org.xomda.model.Package pkg, TemplateContext context) throws IOException {
-		getLogger().error("Generating package {} to {}", pkg.getName(), context.outDir());
+		getLogger().error("Generating package {} to {}", pkg.getName(), context.cwd());
 
-		Path targetDir = Files.createDirectories(Paths.get(context.outDir(), "build", "test-model-data", "templateTest"));
+		Path targetDir = Files.createDirectories(Paths.get(context.cwd(), "build", "test-model-data", "templateTest"));
 		Path targetFile = targetDir.resolve("test-data.txt");
 		try (
 				OutputStream os = new FileOutputStream(targetFile.toFile());

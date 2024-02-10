@@ -27,7 +27,7 @@ public class JteTemplate implements Template<Package> {
 		state.put("out", "");
 
 		//
-		Path outPath = Path.of(templateContext.outDir());
+		Path outPath = Path.of(templateContext.cwd());
 		Path templatePath = outPath.resolve(Paths.get("src", "xomda", "java"));
 		Path classPath = outPath.resolve(Paths.get("build", "jte-classes"));
 
