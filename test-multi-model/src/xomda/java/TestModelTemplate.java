@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.nio.file.Paths;
 
-import org.xomda.core.module.template.XOmdaCodeTemplate;
+import org.xomda.core.module.template.PackageTemplate;
 import org.xomda.core.module.util.EnumWriter;
 import org.xomda.core.module.util.PojoWriter;
 import org.xomda.model.Entity;
@@ -10,7 +10,7 @@ import org.xomda.model.Package;
 import org.xomda.template.TemplateContext;
 import org.xomda.template.TemplateUtils;
 
-public class TestModelTemplate extends XOmdaCodeTemplate {
+public class TestModelTemplate extends PackageTemplate {
 	@Override
 	public void generate(final Package pkg, final TemplateContext context) throws IOException {
 		String newPath = Paths.get(context.cwd(), "src", "generated", "java").toString();
