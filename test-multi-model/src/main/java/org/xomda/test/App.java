@@ -1,15 +1,15 @@
 package org.xomda.test;
 
 import model.one.Customer;
+import model.one.CustomerBean;
 import model.two.Order;
+import model.two.OrderBean;
 
 public class App {
 
 	public static void main(String[] args) {
-
-		Customer c = null;
-		Order o = null;
-
+		Customer customer = new CustomerBean();
+		Order order = new OrderBean();
 	}
 
 }
