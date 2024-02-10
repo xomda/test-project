@@ -17,3 +17,7 @@ xomda {
     classpath = ["org.xomda.model"]
     plugins = ["org.xomda.core.module.XOmdaReverseEntity", "org.xomda.core.module.XOmdaTypeRefs"]
 }
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+}
