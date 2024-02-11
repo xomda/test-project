@@ -1,0 +1,11 @@
+Package;name;packageName;;;;;;;;;
+Enum;name;identifier;;;;;;;;;description
+Value;name;;;;;;;;;;description
+Entity;name;identifier;parent;type;;dependency;transient;;;;description
+Attribute;name;identifier;type;size;scale;enumRef;entityRef;dependency;multiValued;required;description
+;;;;;;;;;;;
+Package;Project 3;project.three;;;;;;;;;
+;;;;;;;;;;;
+Entity;Order;ord;;Dynamic;;Aggregate;;;;;
+Attribute;Customer;cst;Entity;;;;Project 1/Customer;;;TRUE;
+Attribute;Product;pr;Entity;;;;Project 2/Product;;;TRUE;
