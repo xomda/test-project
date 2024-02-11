@@ -16,10 +16,15 @@ plugins {
     id 'org.gradle.toolchains.foojay-resolver-convention' version '0.7.0'
 }
 
-rootProject.name = 'xomda-test'
-
-rootProject.projectDir.listFiles().each {
-    if (it.directory && new File(it, 'build.gradle').exists()) {
-        include(rootProject.projectDir.relativePath(it))
+void includeProjectsFrom(File file) {
+    file.listFiles().each {
+        if (!it.isDirectory()) return
+        if (new File(it, 'build.gradle').exists()) {
+            include(rootProject.projectDir.relativePath(it).replace('/', ':'))
+        }
     }
 }
+
+rootProject.name = 'xomda-test'
+
+includeProjectsFrom(rootProject.projectDir)
