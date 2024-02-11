@@ -4,12 +4,8 @@ Value;name;;;;;;;;;;description
 Entity;name;identifier;parent;type;;dependency;transient;;;;description
 Attribute;name;identifier;type;size;scale;enumRef;entityRef;dependency;multiValued;required;description
 ;;;;;;;;;;;
-Package;Model One;model.one;;;;;;;;;
+Package;Project 3;project.three;;;;;;;;;
 ;;;;;;;;;;;
-Enum;Sort Order;srt;;;;;;;;;
-Value;Ascending;1;;;;;;;;;
-Value;Descending;2;;;;;;;;;
-;;;;;;;;;;;
-Entity;Customer;cst;;Dynamic;;Aggregate;;;;;
-Attribute;First Name;fnm;String;255;;;;;;TRUE;
-Attribute;Last Name;lnm;String;255;;;;;;TRUE;
+Entity;Order;ord;;Dynamic;;Aggregate;;;;;
+Attribute;Customer;cst;Entity;;;;Project 1/Customer;;;TRUE;
+Attribute;Product;pr;Entity;;;;Project 2/Order;;;TRUE;

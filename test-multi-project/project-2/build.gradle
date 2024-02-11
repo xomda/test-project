@@ -10,6 +10,7 @@ repositories {
 
 dependencies {
     xomda libs.xomda.core
+    
     api project(":" + project.parent.name + ":project-1")
 }
 
