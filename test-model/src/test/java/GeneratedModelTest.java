@@ -12,8 +12,8 @@ import org.junit.jupiter.api.Test;
 public class GeneratedModelTest {
 
 	private static final List<String> expected = List.of(
-			"Test|Test Entity 1|Package[Entity]|Attribute 12[String]|Attribute 13[String]",
-			"Test|Test Entity 2|Entity[Entity]|Attribute 22[String]|Attribute 23[String]"
+			"Test|Test Entity 1|Attribute 12[String]|Attribute 13[String]",
+			"Test|Test Entity 2|Attribute 22[String]|Attribute 23[String]"
 	);
 
 	@Test
