@@ -8,4 +8,4 @@ Package;Project 3;project.three;;;;;;;;;
 ;;;;;;;;;;;
 Entity;Order;ord;;Dynamic;;Aggregate;;;;;
 Attribute;Customer;cst;Entity;;;;Project 1/Customer;;;TRUE;
-Attribute;Product;pr;Entity;;;;Project 2/Order;;;TRUE;
+Attribute;Product;pr;Entity;;;;Project 2/Product;;;TRUE;
