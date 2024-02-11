@@ -1,4 +1,5 @@
 plugins {
+    id "java"
     id "application"
     id "org.xomda.plugin-gradle" version "latest.release"
 }
@@ -9,6 +10,8 @@ repositories {
 }
 
 dependencies {
+    implementation project(":test-jte")
+
     xomda libs.xomda.core
 }
 
