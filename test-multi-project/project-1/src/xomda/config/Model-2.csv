@@ -1,0 +1,19 @@
+Package;name;packageName;;;;;;;;;
+Enum;name;identifier;;;;;;;;;description
+Value;name;;;;;;;;;;description
+Entity;name;identifier;parent;type;;dependency;transient;;;;description
+Attribute;name;identifier;type;size;scale;enumRef;entityRef;dependency;multiValued;required;description
+;;;;;;;;;;;
+Package;Model Two;model.two;;;;;;;;;
+;;;;;;;;;;;
+Enum;Sort Order;srt;;;;;;;;;
+Value;Ascending;1;;;;;;;;;
+Value;Descending;2;;;;;;;;;
+;;;;;;;;;;;
+Entity;Product;pdt;;Dynamic;;Aggregate;;;;;
+Attribute;Name;nm;String;255;;;;;;TRUE;
+Attribute;SKU;sku;String;255;;;;;;TRUE;
+;;;;;;;;;;;
+Entity;Order;ord;;Dynamic;;Aggregate;;;;;
+Attribute;Product;p;Entity;;;;Model Two/Product;;;TRUE;
+Attribute;Quantity;qt;Integer;;;;;;;TRUE;

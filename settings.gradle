@@ -28,3 +28,4 @@ void includeProjectsFrom(File file) {
 rootProject.name = 'xomda-test'
 
 includeProjectsFrom(rootProject.projectDir)
+includeProjectsFrom(file("test-multi-project"))
