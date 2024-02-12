@@ -15,7 +15,7 @@ dependencies {
 
 xomda {
     classpath = ["org.xomda.model"]
-    plugins = ["org.xomda.core.module.XOMDAReverseEntity", "org.xomda.core.module.XOMDATypeRefs"]
+    plugins = ["org.xomda.core.module.XOMDACore"]
 }
 
 tasks.withType(Test) {
