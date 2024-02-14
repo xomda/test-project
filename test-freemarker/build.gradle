@@ -8,10 +8,18 @@ repositories {
 }
 
 dependencies {
+    testImplementation libs.junit.jupiter
+    testImplementation libs.jackson.databind
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
     xomda 'org.freemarker:freemarker:2.3.32'
 }
 
 xomda {
     classpath = ["org.xomda.model"]
     plugins = ["org.xomda.core.module.XOMDACore"]
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
 }
