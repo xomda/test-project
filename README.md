@@ -22,7 +22,8 @@ Deployed to your local maven repository, so that gradle can find it:
 #### 2) Configure the repo
 
 By defining the _Github packages_ maven repo,
-Gradle will be able to download the necessary packages:
+Gradle will be able to download the necessary packages:  
+_(Remember to correctly set your credentials first; see [GitHub Packages documentation](https://docs.github.com/en/packages))_
 
 ***settings.gradle***
 
