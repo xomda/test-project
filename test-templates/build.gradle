@@ -8,6 +8,9 @@ repositories {
 }
 
 dependencies {
+    testImplementation libs.junit.jupiter
+    testImplementation libs.jackson.databind
+
     // test local templates dependencies
     xomda libs.log4j
 }
@@ -16,3 +19,5 @@ xomda {
     classpath = ["org.xomda.model"]
     plugins = ["org.xomda.core.module.XOMDACore"]
 }
+
+tasks.withType(Test) { useJUnitPlatform() }
