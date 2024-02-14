@@ -1,6 +1,8 @@
 package com.example.template;
 
+import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Map;
@@ -47,8 +49,11 @@ public class JteTemplate implements Template<Package> {
 		TemplateOutput output = new StringOutput();
 		templateEngine.render("example.jte", state, output);
 
-		System.out.println("filename: " + config.getFilename());
-		System.out.println();
-		System.out.println(config.getTrim() ? output.toString().trim() : output);
+		Path outputJson = outPath.resolve(Paths.get("build", "test-jte", config.getFilename()));
+		Files.createDirectories(outputJson.getParent());
+
+		try (FileWriter fw = new FileWriter(outputJson.toFile())) {
+			fw.write((config.getTrim() ? output.toString().trim() : output).toString());
+		}
 	}
 }

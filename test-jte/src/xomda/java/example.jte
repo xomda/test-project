@@ -5,8 +5,8 @@
 @param com.example.template.TemplateConfig config
 
 <%-- set the output filename --%>
-!{ config.setFilename("test.txt"); }
+!{ config.setFilename("output.json"); }
 
-class Test {
-	// ${pkg.getName()}
+{
+    "name": "${pkg.getName()}"
 }
