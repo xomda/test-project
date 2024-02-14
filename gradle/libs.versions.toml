@@ -5,6 +5,7 @@
 guava = "32.1.2-jre"
 junit-jupiter = "5.10.0"
 log4j = "2.22.1"
+jackson = "2.16.1"
 xomda = "latest.release"
 
 [libraries]
@@ -13,6 +14,7 @@ junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "jun
 log4j = { module = "org.apache.logging.log4j:log4j-core", version.ref = "log4j" }
 xomda-core = { module = "org.xomda:core", version.ref = "xomda" }
 xomda-model = { module = "org.xomda:model", version.ref = "xomda" }
+jackson-databind = { module = 'com.fasterxml.jackson.core:jackson-databind', version.ref = "jackson" }
 
 [plugins]
 xomda-plugin-gradle = { id = "xomda", version.ref = "xomda" }
