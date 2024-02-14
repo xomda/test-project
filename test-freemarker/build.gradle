@@ -8,8 +8,7 @@ repositories {
 }
 
 dependencies {
-    // test local templates dependencies
-    xomda 'gg.jte:jte:3.1.9'
+    xomda 'org.freemarker:freemarker:2.3.32'
 }
 
 xomda {
