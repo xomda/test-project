@@ -1,10 +1,22 @@
+[
 {{#packageList}}
-Name: {{name}}
-Entity:
-  {{#entityList}}
-  Entity: {{name}}
-    {{#attributeList}}
-      Attribute: {{name}} [{{type}}]
-    {{/attributeList}}
-  {{/entityList}}
+{
+    "name": "{{name}}",
+    "entityList": [
+      {{#entityList}}
+      {
+        "name": "{{name}}",
+        "attributeList": [
+            {{#attributeList}}
+            {
+              "name": "{{name}}",
+              "type": "{{type}}"
+            },
+            {{/attributeList}}
+        ]
+      },
+      {{/entityList}}
+     ]
+},
 {{/packageList}}
+]
