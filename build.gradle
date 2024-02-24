@@ -1,0 +1,10 @@
+subprojects { p ->
+    apply plugin: 'base'
+
+    clean.doFirst {
+        File file = p.file("src/generated/java")
+        if (file.exists() && file.isDirectory()) {
+            file.deleteDir()
+        }
+    }
+}
