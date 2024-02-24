@@ -4,7 +4,7 @@
 [versions]
 guava = "32.1.2-jre"
 junit-jupiter = "5.10.2"
-log4j = "2.22.1"
+log4j = "2.23.0"
 jackson = "2.16.1"
 xomda = "latest.release"
 
