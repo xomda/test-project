@@ -3,10 +3,16 @@ pluginManagement {
 
     repositories {
         mavenLocal()
+        mavenCentral()
         gradlePluginPortal()
         maven {
             name 'xomda packages'
             url 'https://maven.pkg.github.com/xomda/xomda'
+
+            credentials {
+                username = System.getenv("USERNAME")
+                password = System.getenv("TOKEN")
+            }
         }
     }
 }
@@ -25,7 +31,7 @@ void includeProjectsFrom(File file) {
     }
 }
 
-rootProject.name = 'xomda-test'
+rootProject.name = 'xomda-test-project'
 
 includeProjectsFrom(rootProject.projectDir)
 includeProjectsFrom(file("test-multi-project"))

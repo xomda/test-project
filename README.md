@@ -21,21 +21,19 @@ Deployed to your local maven repository, so that gradle can find it:
 
 #### 2) Configure the repo
 
-By defining the _Github packages_ maven repo,
-Gradle will be able to download the necessary packages:  
-_(Remember to correctly set your credentials first; see [GitHub Packages documentation](https://docs.github.com/en/packages))_
+The repository will fetch XOMDA from GitHub Packages.
+In order to do so, you'll need to configure access to GitHub Packages.
 
-***settings.gradle***
+> ### Create a new GitHub token
+>
+> In your GitHub Profile, go to "Settings > Developer settings > Personal access tokens > Tokens (classic)".
+> Create a new token with "read:packages" permissions.
 
-```groovy
-pluginManagement {
-	repositories {
-		maven {
-			name 'xomda packages'
-			url 'https://maven.pkg.github.com/xomda/xomda'
-		}
-	}
-}
+You'll need to add your GitHub Access token to `~/.gradle/gradle.properties`:
+
+```.properties
+gpr.user=<GITHUB_USERNAME>
+gpr.token=<PERSONAL_ACCESS_TOKEN>
 ```
 
 ## Build the project

@@ -7,4 +7,18 @@ subprojects { p ->
             file.deleteDir()
         }
     }
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven {
+            name 'xomda packages'
+            url 'https://maven.pkg.github.com/xomda/xomda'
+            credentials {
+                username = System.getenv("USERNAME")
+                password = System.getenv("TOKEN")
+            }
+        }
+    }
+
 }

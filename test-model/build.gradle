@@ -1,6 +1,6 @@
 plugins {
     id "application"
-    id "org.xomda.plugin-gradle" version "latest.release"
+    id "org.xomda.xomda-plugin-gradle" version "latest.release"
 }
 
 repositories {
