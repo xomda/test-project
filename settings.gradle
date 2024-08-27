@@ -3,17 +3,23 @@ pluginManagement {
 
     repositories {
         mavenLocal()
+        mavenCentral()
         gradlePluginPortal()
         maven {
             name 'xomda packages'
             url 'https://maven.pkg.github.com/xomda/xomda'
+
+            credentials {
+                username = System.getenv("USERNAME")
+                password = System.getenv("TOKEN")
+            }
         }
     }
 }
 
 plugins {
     // Apply the foojay-resolver plugin to allow automatic download of JDKs
-    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.7.0'
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.8.0'
 }
 
 void includeProjectsFrom(File file) {
@@ -25,7 +31,7 @@ void includeProjectsFrom(File file) {
     }
 }
 
-rootProject.name = 'xomda-test'
+rootProject.name = 'xomda-test-project'
 
 includeProjectsFrom(rootProject.projectDir)
 includeProjectsFrom(file("test-multi-project"))
