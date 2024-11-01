@@ -1,6 +1,6 @@
 [versions]
 guava = "33.3.0-jre"
-junit-jupiter = "5.11.0"
+junit-jupiter = "5.11.3"
 log4j = "2.23.1"
 jackson = "2.17.2"
 xomda = "latest.release"
