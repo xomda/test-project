@@ -1,5 +1,5 @@
 [versions]
-guava = "33.4.0-jre"
+guava = "33.4.6-jre"
 junit-jupiter = "5.11.4"
 log4j = "2.24.3"
 jackson = "2.18.2"
